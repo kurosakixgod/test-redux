@@ -1,0 +1,79 @@
+{
+  "heroes": [
+    {
+      "id": "25fd5bc0-c0ec-11ee-8040-77792fbb3fd9",
+      "name": "23123132",
+      "description": "231233123",
+      "element": "water"
+    },
+    {
+      "id": "e9e40fd0-c505-11ee-a2d2-2df754c20741",
+      "name": "12123",
+      "description": "12321",
+      "element": "wind"
+    },
+    {
+      "id": "757aa940-c507-11ee-8473-81811a938d72",
+      "name": "123321",
+      "description": "31223121",
+      "element": "earth"
+    },
+    {
+      "id": "b47e04c0-c52a-11ee-aeb1-a35c1cd993a9",
+      "name": "3213132",
+      "description": "132",
+      "element": "fire"
+    },
+    {
+      "id": "306d8510-c530-11ee-a2ae-c7d866c73a24",
+      "name": "Привет",
+      "description": "12231123",
+      "element": "fire"
+    },
+    {
+      "id": "3404b590-c530-11ee-a2ae-c7d866c73a24",
+      "name": "Антон",
+      "description": "12331321132",
+      "element": "wind"
+    },
+    {
+      "id": "8b454240-c533-11ee-bcdc-952ab14da706",
+      "name": "Язык",
+      "description": "13231",
+      "element": "wind"
+    },
+    {
+      "id": "93853a50-c533-11ee-bcdc-952ab14da706",
+      "name": "axzxzxx",
+      "description": "3122311321",
+      "element": "wind"
+    }
+  ],
+  "filters": [
+    {
+      "name": "all",
+      "text": "Все",
+      "id": "997b"
+    },
+    {
+      "name": "fire",
+      "text": "Огонь",
+      "id": "51fe"
+    },
+    {
+      "name": "water",
+      "text": "Вода",
+      "id": "431e"
+    },
+    {
+      "name": "wind",
+      "text": "Ветер",
+      "id": "2c22"
+    },
+    {
+      "name": "earth",
+      "text": "Земля",
+      "id": "c109"
+    }
+  ]
+}
