@@ -1,11 +1,9 @@
-import {useHttp} from '../../hooks/http.hook';
-import { useEffect, useMemo } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-import { heroDeleted, fetchHeroes, filteredHeroesSelector } from './heroesSlice'
-import { createSelector } from '@reduxjs/toolkit';
+import { useMemo } from 'react';
+import { useSelector } from 'react-redux';
 import HeroesListItem from "../heroesListItem/HeroesListItem";
 import Spinner from '../spinner/Spinner';
 import { useGetHeroesQuery } from '../../api/apiSlice';
+import { useDeleteHeroMutation } from '../../api/apiSlice';
 
 // Задача для этого компонента:
 // При клике на "крестик" идет удаление персонажа из общего состояния
@@ -29,6 +27,8 @@ const HeroesList = () => {
         return 0
     }
 
+    const [deleteHero] = useDeleteHeroMutation();
+
     const activeFilter = useSelector(state => state.filters.activeFilter)
     const heroSortedStatus = useSelector(state => state.heroes.heroSortedStatus)
 
@@ -50,33 +50,6 @@ const HeroesList = () => {
             return filteredHeroes
         }
     }, [filteredHeroes, heroSortedStatus])
-    // const sortedHeroesSelector = createSelector(
-    //     (state) => state.heroes.heroSortedStatus,
-    //     filteredHeroesSelector,
-    //     (heroSortedStatus, heroes) => {
-    //         if (heroSortedStatus) {
-    //             return heroes.toSorted(compare)
-    //         } else {
-    //             return heroes
-    //         }
-    //     }
-    // )
-
-
-    const dispatch = useDispatch();
-    const {request} = useHttp();
-    
-    const onDeleteHero = (id) => {
-        dispatch(heroDeleted(id))   
-        request(`http://localhost:3001/heroes/${id}`, "DELETE")
-            .then(data => console.log(data))
-    }
-
-    useEffect(() => {
-        dispatch(fetchHeroes(request))
-        // eslint-disable-next-line
-    }, []);
-
 
     if (isLoading) {
         return <Spinner/>;
@@ -90,7 +63,7 @@ const HeroesList = () => {
         }
 
         return arr.map((props) => {
-            return <HeroesListItem onDeleteHero={onDeleteHero} key={props.id} {...props}/>
+            return <HeroesListItem onDeleteHero={deleteHero} key={props.id} {...props}/>
         })
     }
 

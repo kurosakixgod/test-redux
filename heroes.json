@@ -13,12 +13,6 @@
       "element": "wind"
     },
     {
-      "id": "757aa940-c507-11ee-8473-81811a938d72",
-      "name": "123321",
-      "description": "31223121",
-      "element": "earth"
-    },
-    {
       "id": "b47e04c0-c52a-11ee-aeb1-a35c1cd993a9",
       "name": "3213132",
       "description": "132",
@@ -43,10 +37,10 @@
       "element": "wind"
     },
     {
-      "id": "93853a50-c533-11ee-bcdc-952ab14da706",
-      "name": "axzxzxx",
-      "description": "3122311321",
-      "element": "wind"
+      "id": "e2ce8ce0-c909-11ee-8673-efc222e9e628",
+      "name": "Марк",
+      "description": "13223",
+      "element": "fire"
     }
   ],
   "filters": [
